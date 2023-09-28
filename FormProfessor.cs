@@ -97,7 +97,6 @@ namespace SGA
                 Limpa_Campos();
                 return;
             }
-            cmd.Parameters.AddWithValue("@id", TXTPID.Text);
 
             cmd.Prepare();
             cmd.ExecuteNonQuery();
@@ -237,7 +236,6 @@ namespace SGA
 
                 isAlteracao = true;
                 var item = dataGridView1.SelectedRows[0];
-                TXTPID.Text = item.Cells["id"].Value.ToString();
                 txtMatricula.Text = item.Cells["matricula"].Value.ToString();
                 mmtbDataNascimento.Text = item.Cells["dt_nascimento"].Value.ToString();
                 txtNome.Text = item.Cells["nome"].Value.ToString();

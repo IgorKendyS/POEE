@@ -85,11 +85,6 @@ namespace SGA
             cmd.Parameters.AddWithValue("@cidade", txtCidade.Text);
             cmd.Parameters.AddWithValue("@estado", cboEstados.Text);
             cmd.Parameters.AddWithValue("@senha", txtSenha.Text);
-            if (isAlteracao)
-            {
-                cmd.Parameters.AddWithValue("@id", TxtID.Text);
-
-            }
 
 
             if (!isAlteracao)
@@ -247,7 +242,6 @@ namespace SGA
 
                 isAlteracao = true;
                 var item = dataGridView1.SelectedRows[0];
-                TxtID.Text = item.Cells["id"].Value.ToString();
                 txtMatricula.Text = item.Cells["matricula"].Value.ToString();
                 mmtbDataNascimento.Text = item.Cells["dt_nascimento"].Value.ToString();
                 txtNome.Text = item.Cells["nome"].Value.ToString();
@@ -318,6 +312,5 @@ namespace SGA
         {
             Edit();
         }
-
     }
 }

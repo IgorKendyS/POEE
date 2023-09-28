@@ -1874,11 +1874,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\igor\\Downloads\\POEE6-main\\POEE6-main\\Projeto SGA\\SGA.csproj",
+      "projectUniqueName": "C:\\Users\\igor\\Downloads\\POEE6-main\\POEE6-main\\Projeto SGA\\POEE\\SGA.csproj",
       "projectName": "SGA",
-      "projectPath": "C:\\Users\\igor\\Downloads\\POEE6-main\\POEE6-main\\Projeto SGA\\SGA.csproj",
+      "projectPath": "C:\\Users\\igor\\Downloads\\POEE6-main\\POEE6-main\\Projeto SGA\\POEE\\SGA.csproj",
       "packagesPath": "C:\\Users\\igor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\igor\\Downloads\\POEE6-main\\POEE6-main\\Projeto SGA\\obj\\",
+      "outputPath": "C:\\Users\\igor\\Downloads\\POEE6-main\\POEE6-main\\Projeto SGA\\POEE\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

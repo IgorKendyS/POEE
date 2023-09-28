@@ -28,222 +28,213 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnVisualizar = new ReaLTaiizor.Controls.MaterialButton();
-            this.btnSalvar = new ReaLTaiizor.Controls.MaterialButton();
-            this.cboTipo = new ReaLTaiizor.Controls.MaterialComboBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.CboImpressora = new ReaLTaiizor.Controls.MaterialComboBox();
-            this.TxtAgrupamento = new System.Windows.Forms.GroupBox();
-            this.CboAgrupa = new ReaLTaiizor.Controls.MaterialComboBox();
-            this.TxtDataCriacao = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.TxtAgrupamento.SuspendLayout();
-            this.SuspendLayout();
+            groupBox1 = new GroupBox();
+            btnVisualizar = new ReaLTaiizor.Controls.MaterialButton();
+            btnSalvar = new ReaLTaiizor.Controls.MaterialButton();
+            cboTipo = new ReaLTaiizor.Controls.MaterialComboBox();
+            groupBox2 = new GroupBox();
+            CboImpressora = new ReaLTaiizor.Controls.MaterialComboBox();
+            TxtAgrupamento = new GroupBox();
+            CboAgrupa = new ReaLTaiizor.Controls.MaterialComboBox();
+            TxtDataCriacao = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
+            groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
+            TxtAgrupamento.SuspendLayout();
+            SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnVisualizar);
-            this.groupBox1.Controls.Add(this.btnSalvar);
-            this.groupBox1.Controls.Add(this.cboTipo);
-            this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.TxtAgrupamento);
-            this.groupBox1.Controls.Add(this.TxtDataCriacao);
-            this.groupBox1.Location = new System.Drawing.Point(19, 87);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(751, 340);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Filtros";
+            groupBox1.Controls.Add(btnVisualizar);
+            groupBox1.Controls.Add(btnSalvar);
+            groupBox1.Controls.Add(cboTipo);
+            groupBox1.Controls.Add(groupBox2);
+            groupBox1.Controls.Add(TxtAgrupamento);
+            groupBox1.Controls.Add(TxtDataCriacao);
+            groupBox1.Location = new Point(19, 87);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(751, 340);
+            groupBox1.TabIndex = 0;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Filtros";
             // 
             // btnVisualizar
             // 
-            this.btnVisualizar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnVisualizar.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnVisualizar.Depth = 0;
-            this.btnVisualizar.HighEmphasis = true;
-            this.btnVisualizar.Icon = null;
-            this.btnVisualizar.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            this.btnVisualizar.Location = new System.Drawing.Point(523, 290);
-            this.btnVisualizar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnVisualizar.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            this.btnVisualizar.Name = "btnVisualizar";
-            this.btnVisualizar.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnVisualizar.Size = new System.Drawing.Size(112, 36);
-            this.btnVisualizar.TabIndex = 13;
-            this.btnVisualizar.Text = "&VISUALIZAR";
-            this.btnVisualizar.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnVisualizar.UseAccentColor = false;
-            this.btnVisualizar.UseVisualStyleBackColor = true;
-            this.btnVisualizar.Click += new System.EventHandler(this.btnVisualizar_Click);
+            btnVisualizar.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnVisualizar.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
+            btnVisualizar.Depth = 0;
+            btnVisualizar.HighEmphasis = true;
+            btnVisualizar.Icon = null;
+            btnVisualizar.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
+            btnVisualizar.Location = new Point(523, 290);
+            btnVisualizar.Margin = new Padding(4, 6, 4, 6);
+            btnVisualizar.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            btnVisualizar.Name = "btnVisualizar";
+            btnVisualizar.NoAccentTextColor = Color.Empty;
+            btnVisualizar.Size = new Size(112, 36);
+            btnVisualizar.TabIndex = 13;
+            btnVisualizar.Text = "&VISUALIZAR";
+            btnVisualizar.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            btnVisualizar.UseAccentColor = false;
+            btnVisualizar.UseVisualStyleBackColor = true;
+            btnVisualizar.Click += btnVisualizar_Click;
             // 
             // btnSalvar
             // 
-            this.btnSalvar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnSalvar.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnSalvar.Depth = 0;
-            this.btnSalvar.HighEmphasis = true;
-            this.btnSalvar.Icon = null;
-            this.btnSalvar.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            this.btnSalvar.Location = new System.Drawing.Point(647, 290);
-            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnSalvar.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnSalvar.Size = new System.Drawing.Size(97, 36);
-            this.btnSalvar.TabIndex = 12;
-            this.btnSalvar.Text = "&IMPRIMIR";
-            this.btnSalvar.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnSalvar.UseAccentColor = false;
-            this.btnSalvar.UseVisualStyleBackColor = true;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            btnSalvar.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnSalvar.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
+            btnSalvar.Depth = 0;
+            btnSalvar.HighEmphasis = true;
+            btnSalvar.Icon = null;
+            btnSalvar.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
+            btnSalvar.Location = new Point(647, 290);
+            btnSalvar.Margin = new Padding(4, 6, 4, 6);
+            btnSalvar.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            btnSalvar.Name = "btnSalvar";
+            btnSalvar.NoAccentTextColor = Color.Empty;
+            btnSalvar.Size = new Size(97, 36);
+            btnSalvar.TabIndex = 12;
+            btnSalvar.Text = "&IMPRIMIR";
+            btnSalvar.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
+            btnSalvar.UseAccentColor = false;
+            btnSalvar.UseVisualStyleBackColor = true;
+            btnSalvar.Click += btnSalvar_Click;
             // 
             // cboTipo
             // 
-            this.cboTipo.AutoResize = false;
-            this.cboTipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.cboTipo.Depth = 0;
-            this.cboTipo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.cboTipo.DropDownHeight = 174;
-            this.cboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboTipo.DropDownWidth = 121;
-            this.cboTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.cboTipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.cboTipo.FormattingEnabled = true;
-            this.cboTipo.Hint = "Tipo";
-            this.cboTipo.IntegralHeight = false;
-            this.cboTipo.ItemHeight = 43;
-            this.cboTipo.Items.AddRange(new object[] {
-            "Técnico",
-            "Tecnólogo",
-            "Bacharelado",
-            "Licenciatura",
-            "Pós-Graduação"});
-            this.cboTipo.Location = new System.Drawing.Point(259, 20);
-            this.cboTipo.MaxDropDownItems = 4;
-            this.cboTipo.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
-            this.cboTipo.Name = "cboTipo";
-            this.cboTipo.Size = new System.Drawing.Size(474, 49);
-            this.cboTipo.StartIndex = 0;
-            this.cboTipo.TabIndex = 11;
+            cboTipo.AutoResize = false;
+            cboTipo.BackColor = Color.FromArgb(255, 255, 255);
+            cboTipo.Depth = 0;
+            cboTipo.DrawMode = DrawMode.OwnerDrawVariable;
+            cboTipo.DropDownHeight = 174;
+            cboTipo.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboTipo.DropDownWidth = 121;
+            cboTipo.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            cboTipo.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            cboTipo.FormattingEnabled = true;
+            cboTipo.Hint = "Tipo";
+            cboTipo.IntegralHeight = false;
+            cboTipo.ItemHeight = 43;
+            cboTipo.Items.AddRange(new object[] { "", "Técnico", "Tecnólogo", "Bacharelado", "Licenciatura", "Pós-Graduação" });
+            cboTipo.Location = new Point(259, 20);
+            cboTipo.MaxDropDownItems = 4;
+            cboTipo.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            cboTipo.Name = "cboTipo";
+            cboTipo.Size = new Size(474, 49);
+            cboTipo.StartIndex = 0;
+            cboTipo.TabIndex = 11;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.CboImpressora);
-            this.groupBox2.Location = new System.Drawing.Point(18, 187);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(721, 94);
-            this.groupBox2.TabIndex = 10;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Impressora";
+            groupBox2.Controls.Add(CboImpressora);
+            groupBox2.Location = new Point(18, 187);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(721, 94);
+            groupBox2.TabIndex = 10;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Impressora";
             // 
             // CboImpressora
             // 
-            this.CboImpressora.AutoResize = false;
-            this.CboImpressora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.CboImpressora.Depth = 0;
-            this.CboImpressora.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.CboImpressora.DropDownHeight = 174;
-            this.CboImpressora.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CboImpressora.DropDownWidth = 121;
-            this.CboImpressora.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.CboImpressora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.CboImpressora.FormattingEnabled = true;
-            this.CboImpressora.Hint = "Impressora";
-            this.CboImpressora.IntegralHeight = false;
-            this.CboImpressora.ItemHeight = 43;
-            this.CboImpressora.Location = new System.Drawing.Point(6, 33);
-            this.CboImpressora.MaxDropDownItems = 4;
-            this.CboImpressora.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
-            this.CboImpressora.Name = "CboImpressora";
-            this.CboImpressora.Size = new System.Drawing.Size(709, 49);
-            this.CboImpressora.StartIndex = 0;
-            this.CboImpressora.TabIndex = 9;
+            CboImpressora.AutoResize = false;
+            CboImpressora.BackColor = Color.FromArgb(255, 255, 255);
+            CboImpressora.Depth = 0;
+            CboImpressora.DrawMode = DrawMode.OwnerDrawVariable;
+            CboImpressora.DropDownHeight = 174;
+            CboImpressora.DropDownStyle = ComboBoxStyle.DropDownList;
+            CboImpressora.DropDownWidth = 121;
+            CboImpressora.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            CboImpressora.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            CboImpressora.FormattingEnabled = true;
+            CboImpressora.Hint = "Impressora";
+            CboImpressora.IntegralHeight = false;
+            CboImpressora.ItemHeight = 43;
+            CboImpressora.Location = new Point(6, 33);
+            CboImpressora.MaxDropDownItems = 4;
+            CboImpressora.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            CboImpressora.Name = "CboImpressora";
+            CboImpressora.Size = new Size(709, 49);
+            CboImpressora.StartIndex = 0;
+            CboImpressora.TabIndex = 9;
             // 
             // TxtAgrupamento
             // 
-            this.TxtAgrupamento.Controls.Add(this.CboAgrupa);
-            this.TxtAgrupamento.Location = new System.Drawing.Point(17, 89);
-            this.TxtAgrupamento.Name = "TxtAgrupamento";
-            this.TxtAgrupamento.Size = new System.Drawing.Size(721, 94);
-            this.TxtAgrupamento.TabIndex = 9;
-            this.TxtAgrupamento.TabStop = false;
-            this.TxtAgrupamento.Text = "Agrupamento";
+            TxtAgrupamento.Controls.Add(CboAgrupa);
+            TxtAgrupamento.Location = new Point(17, 89);
+            TxtAgrupamento.Name = "TxtAgrupamento";
+            TxtAgrupamento.Size = new Size(721, 94);
+            TxtAgrupamento.TabIndex = 9;
+            TxtAgrupamento.TabStop = false;
+            TxtAgrupamento.Text = "Agrupamento";
             // 
             // CboAgrupa
             // 
-            this.CboAgrupa.AutoResize = false;
-            this.CboAgrupa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.CboAgrupa.Depth = 0;
-            this.CboAgrupa.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.CboAgrupa.DropDownHeight = 174;
-            this.CboAgrupa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CboAgrupa.DropDownWidth = 121;
-            this.CboAgrupa.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.CboAgrupa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.CboAgrupa.FormattingEnabled = true;
-            this.CboAgrupa.Hint = "Agrupamento";
-            this.CboAgrupa.IntegralHeight = false;
-            this.CboAgrupa.ItemHeight = 43;
-            this.CboAgrupa.Items.AddRange(new object[] {
-            "Nenhum",
-            "Data de Criação",
-            "Tipo"});
-            this.CboAgrupa.Location = new System.Drawing.Point(6, 33);
-            this.CboAgrupa.MaxDropDownItems = 4;
-            this.CboAgrupa.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
-            this.CboAgrupa.Name = "CboAgrupa";
-            this.CboAgrupa.Size = new System.Drawing.Size(709, 49);
-            this.CboAgrupa.StartIndex = 0;
-            this.CboAgrupa.TabIndex = 9;
+            CboAgrupa.AutoResize = false;
+            CboAgrupa.BackColor = Color.FromArgb(255, 255, 255);
+            CboAgrupa.Depth = 0;
+            CboAgrupa.DrawMode = DrawMode.OwnerDrawVariable;
+            CboAgrupa.DropDownHeight = 174;
+            CboAgrupa.DropDownStyle = ComboBoxStyle.DropDownList;
+            CboAgrupa.DropDownWidth = 121;
+            CboAgrupa.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            CboAgrupa.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            CboAgrupa.FormattingEnabled = true;
+            CboAgrupa.Hint = "Agrupamento";
+            CboAgrupa.IntegralHeight = false;
+            CboAgrupa.ItemHeight = 43;
+            CboAgrupa.Items.AddRange(new object[] { "Nenhum", "Data de Criação", "Tipo" });
+            CboAgrupa.Location = new Point(6, 33);
+            CboAgrupa.MaxDropDownItems = 4;
+            CboAgrupa.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            CboAgrupa.Name = "CboAgrupa";
+            CboAgrupa.Size = new Size(709, 49);
+            CboAgrupa.StartIndex = 0;
+            CboAgrupa.TabIndex = 9;
             // 
             // TxtDataCriacao
             // 
-            this.TxtDataCriacao.AnimateReadOnly = false;
-            this.TxtDataCriacao.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.TxtDataCriacao.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.TxtDataCriacao.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.TxtDataCriacao.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.TxtDataCriacao.Depth = 0;
-            this.TxtDataCriacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.TxtDataCriacao.HideSelection = true;
-            this.TxtDataCriacao.Hint = "Data de Criação";
-            this.TxtDataCriacao.LeadingIcon = null;
-            this.TxtDataCriacao.Location = new System.Drawing.Point(24, 21);
-            this.TxtDataCriacao.MaxLength = 32767;
-            this.TxtDataCriacao.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
-            this.TxtDataCriacao.Name = "TxtDataCriacao";
-            this.TxtDataCriacao.PasswordChar = '\0';
-            this.TxtDataCriacao.PrefixSuffixText = null;
-            this.TxtDataCriacao.ReadOnly = false;
-            this.TxtDataCriacao.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.TxtDataCriacao.SelectedText = "";
-            this.TxtDataCriacao.SelectionLength = 0;
-            this.TxtDataCriacao.SelectionStart = 0;
-            this.TxtDataCriacao.ShortcutsEnabled = true;
-            this.TxtDataCriacao.Size = new System.Drawing.Size(224, 48);
-            this.TxtDataCriacao.TabIndex = 7;
-            this.TxtDataCriacao.TabStop = false;
-            this.TxtDataCriacao.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.TxtDataCriacao.TrailingIcon = null;
-            this.TxtDataCriacao.UseSystemPasswordChar = false;
+            TxtDataCriacao.AnimateReadOnly = false;
+            TxtDataCriacao.AutoCompleteMode = AutoCompleteMode.None;
+            TxtDataCriacao.AutoCompleteSource = AutoCompleteSource.None;
+            TxtDataCriacao.BackgroundImageLayout = ImageLayout.None;
+            TxtDataCriacao.CharacterCasing = CharacterCasing.Normal;
+            TxtDataCriacao.Depth = 0;
+            TxtDataCriacao.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            TxtDataCriacao.HideSelection = true;
+            TxtDataCriacao.Hint = "Data de Criação";
+            TxtDataCriacao.LeadingIcon = null;
+            TxtDataCriacao.Location = new Point(24, 21);
+            TxtDataCriacao.MaxLength = 32767;
+            TxtDataCriacao.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            TxtDataCriacao.Name = "TxtDataCriacao";
+            TxtDataCriacao.PasswordChar = '\0';
+            TxtDataCriacao.PrefixSuffixText = null;
+            TxtDataCriacao.ReadOnly = false;
+            TxtDataCriacao.RightToLeft = RightToLeft.No;
+            TxtDataCriacao.SelectedText = "";
+            TxtDataCriacao.SelectionLength = 0;
+            TxtDataCriacao.SelectionStart = 0;
+            TxtDataCriacao.ShortcutsEnabled = true;
+            TxtDataCriacao.Size = new Size(224, 48);
+            TxtDataCriacao.TabIndex = 7;
+            TxtDataCriacao.TabStop = false;
+            TxtDataCriacao.TextAlign = HorizontalAlignment.Left;
+            TxtDataCriacao.TrailingIcon = null;
+            TxtDataCriacao.UseSystemPasswordChar = false;
             // 
             // FormReportCurso
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.groupBox1);
-            this.Name = "FormReportCurso";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Formulário de Cursos";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.TxtAgrupamento.ResumeLayout(false);
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(groupBox1);
+            Name = "FormReportCurso";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Formulário de Cursos";
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            TxtAgrupamento.ResumeLayout(false);
+            ResumeLayout(false);
         }
 
         #endregion

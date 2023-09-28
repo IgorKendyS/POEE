@@ -53,53 +53,35 @@ namespace SGA
             }
         }
 
-
-
-
         private void Salvar()
         {
+            // Obter a data atual no fuso horário de Brasília
+            TimeZoneInfo tzBrasilia = TimeZoneInfo.FindSystemTimeZoneById("E. South America Standard Time");
+            DateTime dataBrasilia = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, tzBrasilia).Date;
 
             var con = new MySqlConnection(cs);
             con.Open();
             var sql = "";
             if (!isAlteracao)
             {
-                sql = "INSERT INTO Curso" +
-                     "(nome, tipo, ano_criacao)" +
-                     "VALUES" + "(@nome, @tipo,@ano_criacao)";
-
+                sql = "INSERT INTO Curso (nome, tipo, dt_criacao) VALUES (@nome, @tipo, @dt_criacao)";
             }
             else
             {
-                sql = "UPDATE Curso SET `nome` = @nome, `tipo` = @tipo, `ano_criacao` = @ano_criacao WHERE `id` = @id;";
-
+                sql = "UPDATE Curso SET `nome` = @nome, `tipo` = @tipo, `dt_criacao` = @dt_criacao WHERE `id` = @id;";
             }
 
             var cmd = new MySqlCommand(sql, con);
             cmd.Parameters.AddWithValue("@nome", txtNome.Text);
             cmd.Parameters.AddWithValue("@tipo", cboTipo.Text);
-            cmd.Parameters.AddWithValue("@ano_criacao", TxtDataCriacao.Text);
-            if (isAlteracao)
-            {
-                cmd.Parameters.AddWithValue("@id", TxtID.Text);
-
-            }
-
-            
-            if (!isAlteracao)
-            {
-               
-                cmd = new MySqlCommand(sql, con);
-                cmd.Parameters.AddWithValue("@nome", txtNome.Text);
-                cmd.Parameters.AddWithValue("@tipo", cboTipo.Text);
-                cmd.Parameters.AddWithValue("@ano_criacao", TxtDataCriacao.Text);
-            }
+            cmd.Parameters.AddWithValue("@dt_criacao", dataBrasilia); // Use apenas a data
 
             cmd.Prepare();
             cmd.ExecuteNonQuery();
 
             Limpa_Campos();
         }
+
 
 
 
@@ -112,15 +94,6 @@ namespace SGA
                 txtNome.Focus();
                 return false;
             }
-
-            if (string.IsNullOrEmpty(TxtDataCriacao.Text))
-            {
-                MessageBox.Show("Ano de Criação é Obrigatorio", "IFSP", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtEndereco.Focus();
-                return false;
-            }
-
-
 
             return true;
         }
@@ -202,9 +175,7 @@ namespace SGA
 
                 isAlteracao = true;
                 var item = dataGridView1.SelectedRows[0];
-                TxtID.Text = item.Cells["id"].Value.ToString();
                 txtNome.Text = item.Cells["nome"].Value.ToString();
-                TxtDataCriacao.Text = item.Cells["ano_criacao"].Value.ToString();
                 cboTipo.Text = item.Cells["tipo"].Value.ToString();
                 materialTabControl1.SelectedIndex = 0;
                 txtNome.Focus();
@@ -241,7 +212,7 @@ namespace SGA
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                if (MessageBox.Show("Deseja Realmente Cancelar", "IFSP", MessageBoxButtons.YesNo,
+                if (MessageBox.Show("Deseja Realmente Excluir?", "IFSP", MessageBoxButtons.YesNo,
                         MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     int id = (int)dataGridView1.SelectedRows[0].Cells[0].Value;

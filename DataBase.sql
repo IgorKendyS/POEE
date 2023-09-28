@@ -24,6 +24,7 @@ CREATE TABLE IF NOT EXISTS Curso (
 	PRIMARY KEY(id)	
 	
 );
+
 CREATE TABLE IF NOT EXISTS Professor (
 	id				int				NOT NULL AUTO_INCREMENT,
 	matricula		varchar(15)		NOT NULL,		
