@@ -85,6 +85,7 @@ namespace SGA
             cmd.Parameters.AddWithValue("@cidade", txtCidade.Text);
             cmd.Parameters.AddWithValue("@estado", cboEstados.Text);
             cmd.Parameters.AddWithValue("@senha", txtSenha.Text);
+            cmd.Parameters.AddWithValue("@id", txt_id.Text);
 
 
             if (!isAlteracao)
@@ -102,6 +103,7 @@ namespace SGA
                 cmd.Parameters.AddWithValue("@cidade", txtCidade.Text);
                 cmd.Parameters.AddWithValue("@estado", cboEstados.Text);
                 cmd.Parameters.AddWithValue("@senha", txtSenha.Text);
+                cmd.Parameters.AddWithValue("@id", txt_id.Text);
             }
 
 
@@ -252,6 +254,7 @@ namespace SGA
                 txtSenha.Text = item.Cells["senha"].Value.ToString();
                 materialTabControl1.SelectedIndex = 0;
                 txtMatricula.Focus();
+                txt_id.Text = item.Cells["id"].Value.ToString();
             }
             else
             {
@@ -311,6 +314,16 @@ namespace SGA
         private void dataGridView1_CellContentDoubleClick(object? sender, DataGridViewCellEventArgs e)
         {
             Edit();
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialTextBoxEdit1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

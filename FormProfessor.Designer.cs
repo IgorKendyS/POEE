@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProfessor));
             materialTabControl1 = new ReaLTaiizor.Controls.MaterialTabControl();
             tabPage1 = new TabPage();
+            txt_id = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             TxtFormacao = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             CboxTitulacao = new ReaLTaiizor.Controls.MaterialComboBox();
             btnCancelar = new ReaLTaiizor.Controls.MaterialButton();
@@ -75,6 +76,7 @@
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(txt_id);
             tabPage1.Controls.Add(TxtFormacao);
             tabPage1.Controls.Add(CboxTitulacao);
             tabPage1.Controls.Add(btnCancelar);
@@ -94,6 +96,37 @@
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Cadastro";
             tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // txt_id
+            // 
+            txt_id.AnimateReadOnly = false;
+            txt_id.AutoCompleteMode = AutoCompleteMode.None;
+            txt_id.AutoCompleteSource = AutoCompleteSource.None;
+            txt_id.BackgroundImageLayout = ImageLayout.None;
+            txt_id.CharacterCasing = CharacterCasing.Normal;
+            txt_id.Depth = 0;
+            txt_id.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txt_id.HideSelection = true;
+            txt_id.Hint = "ID";
+            txt_id.LeadingIcon = null;
+            txt_id.Location = new Point(26, 276);
+            txt_id.MaxLength = 32767;
+            txt_id.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            txt_id.Name = "txt_id";
+            txt_id.PasswordChar = '\0';
+            txt_id.PrefixSuffixText = null;
+            txt_id.ReadOnly = true;
+            txt_id.RightToLeft = RightToLeft.No;
+            txt_id.SelectedText = "";
+            txt_id.SelectionLength = 0;
+            txt_id.SelectionStart = 0;
+            txt_id.ShortcutsEnabled = true;
+            txt_id.Size = new Size(83, 48);
+            txt_id.TabIndex = 13;
+            txt_id.TabStop = false;
+            txt_id.TextAlign = HorizontalAlignment.Left;
+            txt_id.TrailingIcon = null;
+            txt_id.UseSystemPasswordChar = false;
             // 
             // TxtFormacao
             // 
@@ -486,6 +519,7 @@
             Btn_Edit.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
             Btn_Edit.UseAccentColor = false;
             Btn_Edit.UseVisualStyleBackColor = true;
+            Btn_Edit.Click += Btn_Edit_Click_1;
             // 
             // Btn_new
             // 
@@ -567,5 +601,6 @@
         private ReaLTaiizor.Controls.MaterialTextBoxEdit txtMatricula;
         private ReaLTaiizor.Controls.MaterialTextBoxEdit TxtFormacao;
         private ReaLTaiizor.Controls.MaterialComboBox CboxTitulacao;
+        private ReaLTaiizor.Controls.MaterialTextBoxEdit txt_id;
     }
 }

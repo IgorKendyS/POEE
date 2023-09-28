@@ -74,7 +74,8 @@ namespace SGA
             var cmd = new MySqlCommand(sql, con);
             cmd.Parameters.AddWithValue("@nome", txtNome.Text);
             cmd.Parameters.AddWithValue("@tipo", cboTipo.Text);
-            cmd.Parameters.AddWithValue("@dt_criacao", dataBrasilia); // Use apenas a data
+            cmd.Parameters.AddWithValue("@dt_criacao", dataBrasilia);
+            cmd.Parameters.AddWithValue("@id", txt_id.Text);
 
             cmd.Prepare();
             cmd.ExecuteNonQuery();
@@ -177,6 +178,7 @@ namespace SGA
                 var item = dataGridView1.SelectedRows[0];
                 txtNome.Text = item.Cells["nome"].Value.ToString();
                 cboTipo.Text = item.Cells["tipo"].Value.ToString();
+                txt_id.Text = item.Cells["id"].Value.ToString();
                 materialTabControl1.SelectedIndex = 0;
                 txtNome.Focus();
             }

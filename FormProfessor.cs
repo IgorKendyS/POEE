@@ -87,7 +87,7 @@ namespace SGA
             cmd.Parameters.AddWithValue("@bairro", txtBairro.Text);
             cmd.Parameters.AddWithValue("@cidade", txtCidade.Text);
             cmd.Parameters.AddWithValue("@estado", cboEstados.Text);
-
+            cmd.Parameters.AddWithValue("@id", txt_id.Text);
             cmd.Parameters.AddWithValue("@titulacao", CboxTitulacao.Text);
             cmd.Parameters.AddWithValue("@area_formacao", TxtFormacao.Text);
             if (!isAlteracao)
@@ -245,6 +245,7 @@ namespace SGA
                 cboEstados.Text = item.Cells["estado"].Value.ToString();
                 CboxTitulacao.Text = item.Cells["titulacao"].Value.ToString();
                 TxtFormacao.Text = item.Cells["Area_Formacao"].Value.ToString();
+                txt_id.Text = item.Cells["id"].Value.ToString();
                 materialTabControl1.SelectedIndex = 0;
                 txtMatricula.Focus();
             }
@@ -306,6 +307,11 @@ namespace SGA
         private void FormProfessor_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Btn_Edit_Click_1(object sender, EventArgs e)
+        {
+            Edit();
         }
     }
 }
